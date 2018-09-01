@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -11,7 +14,6 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
     buildTypes {
         release {
@@ -72,6 +74,8 @@ dependencies {
     implementation rootProject.ext.dependencies["MPAndroidChart"]
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     androidTestImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
 
 }
 repositories {

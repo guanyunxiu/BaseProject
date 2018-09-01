@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:acv="http://schemas.android.com/tools"
+    android:gravity="center"
+    >
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:id="@+id/flv"
+        >
+
+        <!--<com.hqkj.newsproject.widget.AccelerateCircularView
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            acv:cycleTime="1000"
+            acv:globuleColor="#945CEA"
+            acv:globuleRadius="10dp"
+            acv:ringColor="#734AE5"
+            acv:ringWidth="4dp"></com.hqkj.newsproject.widget.AccelerateCircularView>-->
+
+        <com.hqkj.newsproject.widget.MyRound
+            android:id="@+id/round"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+        <com.hqkj.newsproject.widget.RoundImageView
+
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:text="呼气"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            android:background="@drawable/circular"
+            android:visibility="gone"
+
+        />
+    </FrameLayout>
+
+
+</LinearLayout>

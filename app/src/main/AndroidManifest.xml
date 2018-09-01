@@ -36,7 +36,7 @@
         android:supportsRtl="true"
         android:name=".base.BaseApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".test.TestBseqxActivity">
+        <activity android:name=".test.TestBallonscaleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

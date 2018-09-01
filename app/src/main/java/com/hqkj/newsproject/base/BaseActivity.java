@@ -64,7 +64,7 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     }
     protected abstract T onCreatePresenter();
     @Override
-    public View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View    createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = getLayoutInflater().inflate(getContentLayout(), container);
         unbinder = ButterKnife.bind(this, view);
         return view;

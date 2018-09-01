@@ -33,5 +33,22 @@
         <item name="android:windowEnterAnimation">@anim/dialog_bottom_slide_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_bottom_slide_out</item>
     </style>
+    <declare-styleable name="myround">
 
+        <attr name="currentnum" format="integer" />
+
+        <attr name="allnum" format="integer" />
+
+        <attr name="remind" format="string" />
+
+        <attr name="roundwidth" format="integer" />
+
+    </declare-styleable>
+    <declare-styleable name="AccelerateCircularView">
+        <attr name="ringColor" />
+        <attr name="ringWidth" />
+        <attr name="globuleColor" />
+        <attr name="globuleRadius" />
+        <attr name="cycleTime" />
+    </declare-styleable>
 </resources>
