@@ -1,6 +1,7 @@
 package com.hqkj.newsproject.base;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.IntRange;
@@ -8,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.hqkj.newsproject.R;
@@ -41,7 +43,7 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     @Nullable
     @BindView(R.id.SimpleMultiStateView)
     SimpleMultiStateView mSimpleMultiStateView;
-
+    protected Context mContext;
     @Nullable
     @Inject
     protected T mPresenter;
@@ -49,10 +51,13 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        initSwipeBackFinish();
+        //initSwipeBackFinish();
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
+                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         mRootView = createView(null, null, savedInstanceState);
         setContentView(mRootView);
+        mContext = this;
         if (null != onCreatePresenter()) {
             mPresenter = onCreatePresenter();
         }

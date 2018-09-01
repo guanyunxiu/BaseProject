@@ -28,6 +28,7 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- 允许应用访问震动器 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -36,13 +37,16 @@
         android:supportsRtl="true"
         android:name=".base.BaseApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".test.TestBallonscaleActivity">
+        <activity android:name=".ui.rollviewpager.RollviewPagerActivity2"
+         android:screenOrientation="landscape"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
